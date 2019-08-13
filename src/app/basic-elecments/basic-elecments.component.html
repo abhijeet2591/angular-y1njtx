@@ -1,0 +1,37 @@
+<p>
+basic-elecments works!
+</p>
+<div class="container">
+  <mat-card>
+    <div class="row">
+      <mat-form-field class="col-md-5">
+        <input matInput placeholder="First Name" value="">
+      </mat-form-field>
+      <mat-form-field class="col-md-5">
+        <input matInput placeholder="Last Name" value="">
+      </mat-form-field>
+    </div>
+    <div class="row">
+      <mat-radio-group aria-label="Select an option" class="col-md-5 top-padding">
+        <mat-label class="col-md-5">Select Gender</mat-label>
+        <mat-radio-button value="1" class="col-md-3">Male</mat-radio-button>
+        <mat-radio-button value="2" class="col-md-3">Female</mat-radio-button>
+      </mat-radio-group>
+      <mat-form-field class="col-md-5">
+        <input matInput [matDatepicker]="picker" placeholder="Select birth date">
+        <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+        <mat-datepicker #picker></mat-datepicker>
+      </mat-form-field>
+    </div>
+    <div class="row">
+      <mat-form-field class="col-md-5">
+        <mat-label>Select Department</mat-label>
+          <mat-select name="dept-name" [(value)]="selected">
+          <mat-option *ngFor="let dept of department" [value]="dept.value">
+            {{dept.viewValue}}
+            </mat-option>
+        </mat-select> 
+      </mat-form-field>
+    </div>
+  </mat-card>
+</div>

@@ -1,0 +1,14 @@
+<div class="header-nav">
+    <button type="button" mat-button (click)="drawer.toggle()">
+      <i class="fa fa-bars fa-2x"></i>
+    </button>
+</div>
+<mat-drawer-container class="example-container" autosize>
+  <mat-drawer #drawer class="example-sidenav" mode="side">
+      <mat-nav-list>
+        <a mat-list-item routerLink="{{navItem.link}}" *ngFor="let navItem of sideNavigationItems"
+        (click)="selectedNavItem(event,navItem)">{{navItem.name}}</a>
+    </mat-nav-list>
+  </mat-drawer>
+  <router-outlet></router-outlet>
+</mat-drawer-container>

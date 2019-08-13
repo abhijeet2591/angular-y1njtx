@@ -1,0 +1,19 @@
+/* Add application styles & imports to this file! */
+
+@import "~@angular/material/prebuilt-themes/deeppurple-amber.css";
+
+.example-container {
+  width: 100vw;
+   height: 88vh;
+  border: 1px solid rgba(0, 0, 0, 0.5);
+}
+
+.example-sidenav {
+  padding: 20px;
+  background-color: whitesmoke;
+}
+
+.top-padding {
+  padding-top:20px;
+}
+
