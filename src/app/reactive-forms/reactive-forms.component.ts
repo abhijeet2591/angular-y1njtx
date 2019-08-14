@@ -12,7 +12,7 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 export class ReactiveFormsComponent implements OnInit {
 
  registerForm: FormGroup;
-    submitted = false;
+    submitted = false;,
 
     constructor(private formBuilder: FormBuilder) { }
 
